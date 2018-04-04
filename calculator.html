@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<style>
+    form {
+        border: 2px solid grey;
+        padding: 10px;
+    }
+
+    #CC {
+        background-color: rgb(122, 116, 116)
+    }
+
+    #displayArea {
+       width: 100%;
+       padding: 0px;
+       margin: 0px;
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <form name="calculator">
+            <table>
+                <tr colspan="4"  >
+                    <td id="displayArea">
+                        <input type="text" name="input" style="width:90%" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="one" value=" 1 " onclick="calculator.input.value += ' 1 '">
+                        <input type="button" name="two" value=" 2 " oncLick="calculator.input.value += ' 2 '">
+                        <input type="button" name="three" value=" 3 " onclick="calculator.input.value += ' 3 '">
+                        <input type="button" name="plus" value=" + " onclick="calculator.input.value += ' + '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="four" value=" 4 " onclick="calculator.input.value += ' 4 '">
+                        <input type="button" name="five" value=" 5 " oncLick="calculator.input.value += ' 5 '">
+                        <input type="button" name="six" value=" 6 " onclick="calculator.input.value += ' 6 '">
+                        <input type="button" name="minus" value=" - " onclick="calculator.input.value += ' - '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="seven" value=" 7 " onclick="calculator.input.value += ' 7 '">
+                        <input type="button" name="eight" value=" 8 " oncLick="calculator.input.value += ' 8 '">
+                        <input type="button" name="nine" value=" 9 " onclick="calculator.input.value += ' 9 '">
+                        <input type="button" name="multiply" value=" * " onclick="calculator.input.value += ' * '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" id="CC" name="clear" value=" C " onclick="calculator.input.value = ''">
+                        <input type="button" name="zero" value=" 0 " onclick="calculator.input.value += ' 0 '">
+                        <input type="button" name="calculate" value=" = " onclick="calculator.input.value = eval(calculator.input.value)">
+                        <input type="button" name="div" value=" / " onclick="calculator.input.value += ' / '">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>
