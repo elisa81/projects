@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(
+            function () {
+                $("#button1").click(
+                    function () {
+                        alert("you clicked button 1");
+                    }
+                );
+
+                $("#button2").click(
+                    function () {
+                        alert("you clicked button 2");
+                    }
+                );
+
+                $("#anchor3").click(
+                    function () {
+                        alert("you clicked anchor tag 3");
+                    }
+                );
+            }
+        );
+    </script>
+</head>
+
+<body>
+
+
+    <div data-role="header">
+        <h1>Button Example</h1>
+    </div>
+
+
+    <div data-role="content">
+        <div data-role="controlgroup" data-corners="false">
+            <button id="button1" data-role="button">Button 1</button>
+            <button id="button2" data-role="button">Button 2</button>
+            <a id="anchor3" data-role="button">Anchor 3</a>
+        </div>
+    </div>
+
+
+    <div data-role="footer">
+        <h1>(c)홍길동</h1>
+    </div>
+
+    <br>
+    <hr>
+
+    <br>
+    <div data-role="header">
+        <h1>Example of Lists</h1>
+    </div>
+
+    <div data-role="content"></div>
+    <h1>스마트폰 업체 리스트</h1>
+
+    <ul data-role="listview" data-inset="true">
+
+        <li id="button1">
+            <a href="#">Samsung</a>
+        </li>
+        <li id="button1">
+            <a href="#">LG</a>
+        </li>
+        <li id="button1">
+            <a href="#">Apple</a>
+        </li>
+
+    </ul>
+
+
+    <div data-role="footer">
+        <h1>(c)홍길동</h1>
+    </div>
+
+</body>
+
+</html>
