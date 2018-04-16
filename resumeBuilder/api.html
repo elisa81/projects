@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<style>
+    body {
+        background: url(marble.jpg);
+            width: 100%;
+            height:100%;
+            background-repeat: repeat-y;
+            background-size:contain;
+    }
+
+    nav {
+        margin: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid rgb(48, 47, 47);
+        border-bottom: 1px solid rgb(48, 47, 47);
+        padding: 10px 0px;
+        font-size: 30px;
+    }
+
+    nav ul li {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0px 10px;
+        letter-spacing: 7px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #aboutContainer {
+        margin-top: 40px;
+    }
+
+
+    footer {
+        width: 100%;
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        text-transform: uppercase;
+        color: rgb(48, 47, 47);
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    #links {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    #pythonBox {
+        border: 1px solid grey;
+    }
+</style>
+
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="contacts.html">Contact</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Code Examples</h1>
+
+        <p> Below are code samples in Python, JavaScript, Ruby, PHP and the command line on connecting to the API to make a search
+            query for "ryan gosling". Also note that we provide open-source, language-specific code in the form of our RESUME MAKER
+            SDKs that make connecting to and interacting with our API even simpler in your Javascript, Python, Ruby and PHP
+            projects.
+        </p>
+
+        <h3>Python</h3>
+        <div class="container" id="pythonBox">
+            <p>
+                <br> # python
+                <br> import urllib,json
+                <br> data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5").read())
+                <br>print json.dumps(data, sort_keys=True, indent=4)
+            </p>
+        </div>
+
+        <br>
+
+        <h3>Javascript</h3>
+        <div class="container" id="pythonBox">
+            <p>
+                <br>//javascript, jQuery
+                <br>var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
+                <br>xhr.done(function(data) { console.log("success got data", data); });
+            </p>
+        </div>
+
+        <br>
+
+        <h3>Ruby</h3>
+        <div class="container" id="pythonBox">
+            <br>#ruby
+            <br>require 'net/http'
+            <br>require 'json' url = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5"
+            <br>resp = Net::HTTP.get_response(URI.parse(url))
+            <br>buffer = resp.body result = JSON.parse(buffer)
+            <br>puts result
+            <br>
+
+        </div>
+
+        <br>
+
+        <h3>PHP</h3>
+        <div class="container" id="pythonBox">
+            <br>// php
+            <br>$url = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5";
+            <br>print_r(json_decode(file_get_contents($url)));
+            <br>
+        </div>
+
+        <br>
+
+
+        <footer>
+
+                <div class="w3-xlarge w3-section">
+                    <a href="https://www.facebook.com/">
+                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    </a>
+                </div>
+        
+                <br>
+        
+                <div>
+                    <span>
+                        <a href="https://news.samsung.com/us/" id="links">News Center</a>
+                    </span>
+                    <span>|</span>
+                    <span>
+                        <a href="https://www.samsung.com/us/careers/" id="links">Careers</a>
+                        <span>|</span>
+                        <span>
+                            <a href="https://www.samsung.com/us/account/our-approach-to-privacy/" id="links">Terms and Use</a>
+                        </span>
+                        <span>|</span>
+                        <span>
+                            <a href="api.html" id="links">API</a>
+                        </span>
+                </div>
+        
+                <br>
+        
+                <span>Copyright &#169</span> 2018 RESUME MAKER All Rights Reserved
+            </footer>
+
+
+</body>
+
+</html>

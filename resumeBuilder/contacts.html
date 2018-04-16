@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<style>
+    body {
+        background: url(marble.jpg);
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-size: cover;
+    }
+
+    nav {
+        margin: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid rgb(48, 47, 47);
+        border-bottom: 1px solid rgb(48, 47, 47);
+        padding: 10px 0px;
+        font-size: 30px;
+    }
+
+    nav ul li {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0px 10px;
+        letter-spacing: 7px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #aboutContainer {
+        margin-top: 40px;
+    }
+
+
+    footer {
+        width: 100%;
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        text-transform: uppercase;
+        color: rgb(48, 47, 47);
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    #links {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    #makeButton {
+        text-align:center;
+        padding: 20px;
+    }
+
+    .btn.outline {
+        background: none;
+        padding: 12px 22px;
+    }
+
+    .btn-primary.outline {
+        border: 1px solid #000;
+        color: #000;
+    }
+</style>
+
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="contacts.html">Contact</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <!-- Add Google Maps -->
+                <div id="googleMap" class="w3-round-large " style="width:100%;height:400px;"></div>
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Yongin, KR
+                    <br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +82 10-3304-0517
+                    <br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com
+                    <br>
+                </div>
+
+                <br>
+                <p>Leave note</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <div id="makeButton">
+                        <button type="submit" class="btn btn-primary btn-lg outline" form="messageSend" onclick="">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.facebook.com/">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.linkedin.com/">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </a>
+        </div>
+
+        <br>
+
+        <div>
+            <span>
+                <a href="https://news.samsung.com/us/" id="links">News Center</a>
+            </span>
+            <span>|</span>
+            <span>
+                <a href="https://www.samsung.com/us/careers/" id="links">Careers</a>
+                <span>|</span>
+                <span>
+                    <a href="https://www.samsung.com/us/account/our-approach-to-privacy/" id="links">Terms and Use</a>
+                </span>
+                <span>|</span>
+                <span>
+                    <a href="api.html" id="links">API</a>
+                </span>
+        </div>
+
+        <br>
+
+
+        <span>Copyright &#169</span> 2018 RESUME MAKER All Rights Reserved
+    </footer>
+
+
+    <!-- Google Maps -->
+    <script>
+        function myMap() {
+
+            //동백주민센터
+
+            myCenter = new google.maps.LatLng(37.2724494, 127.1515919);
+            var mapOptions = {
+                center: myCenter,
+                zoom: 14,
+                scrollwheel: false,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmcVq4fuHEdMIbjjFhknweoa6z1oXFd7k&callback=myMap"></script>
+
+
+
+</body>
+
+</html>

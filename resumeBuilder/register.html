@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+
+
+
+
+<style>
+    body {
+        background: url(marble.jpg);
+        width: 100%;
+        color: rgb(48, 47, 47);
+    }
+
+    nav {
+        margin: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid rgb(48, 47, 47);
+        border-bottom: 1px solid rgb(48, 47, 47);
+        padding: 10px 0px;
+        font-size: 30px;
+    }
+
+    nav ul li {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0px 10px;
+        letter-spacing: 7px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #aboutContainer {
+        margin-top: 40px;
+    }
+
+
+    footer {
+        width: 100%;
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        text-transform: uppercase;
+        color: rgb(48, 47, 47);
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    #links {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+
+    input {
+        font-size: 18px;
+        /* font-size is up to you, not required */
+        padding: 10px;
+        /* padding is up to you */
+        display: block;
+        /* just to make sure display is block */
+        width: 100%;
+        /* width is up to you */
+    }
+
+    label {
+        font-size: 18px;
+        /* up to you, I matched the <input> style */
+        font-weight: normal;
+        /* up to you, not required */
+        left: 10px;
+        /* determines space to left of label */
+        top: 13px;
+        /* determines space above label */
+        pointer-events: none;
+        /* enables click through on label */
+        transition: 0.2s ease all;
+        /* determines animation during */
+        -moz-transition: 0.2s ease all;
+        /* user interaction */
+        -webkit-transition: 0.2s ease all;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -20px;
+        /* where the label goes upon interaction */
+        font-size: 14px;
+        /* font-size change on interaction */
+    }
+
+    #makeButton {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .btn.outline {
+        background: none;
+        padding: 12px 22px;
+    }
+
+    .btn-primary.outline {
+        border: 1px solid #000;
+        color: #000;
+    }
+</style>
+
+<body>
+
+
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="resume.html">Resumes</a>
+            </li>
+            <li>
+                <a href="contacts.html">Contacts</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <div class="container" style="padding:90px">
+
+        <div class="w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
+                    <span id="position" class="w3-center w3-padding-large w3-black w3-xlarge w3-wide">RESUME MAKER</span>
+            </div>  
+        </div>
+
+        <br>
+        <br>
+
+        <form method="post" action="process-php">
+            <fieldset>
+                <legend>회원정보입력</legend>
+
+                <label for="iden">ID</label>
+                <input type="text" name="iden" id="iden">
+
+                <button>중복검사</button>
+                <br>
+
+                <label for="name">Password</label>
+                <input type="password" name="password1" id="password1">
+
+                <br>
+
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+
+                <br>
+
+                <label for="tel">Cell Number</label>
+                <input type="tel" name="tel" id="tel">
+
+                <br>
+
+                <label for="name">e-mail</label>
+                <input type="email" name="email" id="email">
+
+                <br>
+
+                <label for="dob">D.O.B</label>
+                <input type="date" name="dob" id="dob">
+
+                <br>
+
+                <label for="name">Homepage</label>
+                <input type="url" name="url" id="url">
+
+                <br>
+
+                <input type="radio" name="gender" value="Male"> Male
+                <br>
+                <input type="radio" name="gender" value="Female"> Female
+                <br>
+
+                <input type="submit" name="submit" value="제출">
+                <br>
+                <input type="reset" name="reset" value="초기화">
+
+
+            </fieldset>
+        </form>
+
+    </div>
+
+
+    <footer>
+
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.facebook.com/">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.linkedin.com/">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </a>
+        </div>
+
+        <br>
+
+        <div>
+            <span>
+                <a href="https://news.samsung.com/us/" id="links">News Center</a>
+            </span>
+            <span>|</span>
+            <span>
+                <a href="https://www.samsung.com/us/careers/" id="links">Careers</a>
+                <span>|</span>
+                <span>
+                    <a href="https://www.samsung.com/us/account/our-approach-to-privacy/" id="links">Terms and Use</a>
+                </span>
+                <span>|</span>
+                <span>
+                    <a href="api.html" id="links">API</a>
+                </span>
+        </div>
+
+        <br>
+
+        <span>Copyright &#169</span> 2018 RESUME MAKER All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

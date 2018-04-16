@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+
+
+
+
+<style>
+    body {
+        background: url(marble.jpg);
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-size: contain;
+        color: rgb(48, 47, 47);
+
+    }
+
+    nav {
+        margin: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid rgb(48, 47, 47);
+        border-bottom: 1px solid rgb(48, 47, 47);
+        padding: 10px 0px;
+        font-size: 30px;
+    }
+
+    nav ul li {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0px 10px;
+        letter-spacing: 7px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #aboutContainer {
+        margin-top: 40px;
+    }
+
+
+    footer {
+        width: 100%;
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        text-transform: uppercase;
+        color: rgb(48, 47, 47);
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    #links {
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+    }
+
+
+    input {
+        font-size: 18px;
+        /* font-size is up to you, not required */
+        padding: 10px;
+        /* padding is up to you */
+        display: block;
+        /* just to make sure display is block */
+        width: 100%;
+        /* width is up to you */
+    }
+
+    label {
+        font-size: 18px;
+        /* up to you, I matched the <input> style */
+        font-weight: normal;
+        /* up to you, not required */
+        left: 10px;
+        /* determines space to left of label */
+        top: 13px;
+        /* determines space above label */
+        pointer-events: none;
+        /* enables click through on label */
+        transition: 0.2s ease all;
+        /* determines animation during */
+        -moz-transition: 0.2s ease all;
+        /* user interaction */
+        -webkit-transition: 0.2s ease all;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -20px;
+        /* where the label goes upon interaction */
+        font-size: 14px;
+        /* font-size change on interaction */
+    }
+
+    #makeButton {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .btn.outline {
+        background: none;
+        padding: 12px 22px;
+    }
+
+    .btn-primary.outline {
+        border: 1px solid #000;
+        color: #000;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="contacts.html">Contacts</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+
+        <form action="action.php" method="post" id="simpleResume">
+            <div class="row">
+
+                <h3>Personal Info</h3>
+                <br>
+                <div class="col-md-6">
+                    <input type="text" name="fullName" required>
+                    <label>Full Name</label>
+                    <br>
+                    <input type="date" name="dob" required>
+                    <label>DOB</label>
+                    <input type="tel" name="tel" required>
+                    <label>Phone Number</label>
+                </div>
+
+                <div class="col-md-6">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                    <input type="text" name="address" required>
+                    <label>Address</label>
+                    <input type="url" name="url" required>
+                    <label>Website</label>
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="row">
+                <h3>Education</h3>
+                <br>
+                <div class="col-md-6">
+
+                    <input type="text" name="colUni" required>
+                    <label>College/Univeristy</label>
+
+                    <input type="text" name="yearsColUni" placeholder="1999-2003" required>
+                    <label>Years Attended</label>
+                    <br>
+
+                    <br>
+                    <b>Degree</b>
+                    <select name="degree">
+                        <option value="none">--</option>
+                        <option value="phd">Ph.D</option>
+                        <option value="master">Master</option>
+                        <option value="bachelor">Bachelor</option>
+                        <option value="certificate">Certificate</option>
+                    </select>
+
+                    <b>Major</b>
+                    <select name="major">
+                        <option value="0">--</option>
+                        <option value="finance">Finance</option>
+                        <option value="economics">Economics</option>
+                        <option value="webdev">Web Dev</option>
+                        <option value="science">Science</option>
+                        <option value="history">history</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <input type="text" name="high" required>
+                    <label>High School</label>
+                    <input type="text" name="grad" required>
+                    <label>Graduated Year</label>
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="row">
+                <h3>Other</h3>
+                <br>
+                <div class="container">
+                    <textarea row="5" cols="120" name="hobby"></textarea>
+                </div>
+
+                <b> Hobbies/Interests</b>
+                <br>
+                <br>
+
+                <div class="container">
+                    <textarea row="5" cols="120" name="volun"></textarea>
+                </div>
+
+                <b>Volunteer</b>
+                <br>
+                <br>
+                <div class="container">
+                    <textarea row="5" cols="120" name="skills" placeholder="Excel/Photoshop/Javascript..."></textarea>
+                </div>
+                <b>Skills</b>
+
+            </div>
+
+
+            <div class="container" id="makeButton">
+                <button type="submit" class="btn btn-primary btn-lg outline" form="simpleResume" onclick="simpleResume()">Make Resume</button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <footer>
+
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.facebook.com/">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.linkedin.com/">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </a>
+        </div>
+
+        <br>
+
+        <div>
+            <span>
+                <a href="https://news.samsung.com/us/" id="links">News Center</a>
+            </span>
+            <span>|</span>
+            <span>
+                <a href="https://www.samsung.com/us/careers/" id="links">Careers</a>
+                <span>|</span>
+                <span>
+                    <a href="https://www.samsung.com/us/account/our-approach-to-privacy/" id="links">Terms and Use</a>
+                </span>
+                <span>|</span>
+                <span>
+                    <a href="api.html" id="links">API</a>
+                </span>
+        </div>
+
+        <br>
+
+        <span>Copyright &#169</span> 2018 RESUME MAKER All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
