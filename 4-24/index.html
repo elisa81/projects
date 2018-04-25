@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function calc(type) {
+            var x = Number(document.calculator.num1.value);
+            var y;
+            if (type == 1) {
+                y = Math.sin((x * Math.PI) / 180)
+            } else if (type == 2) {
+                y = Math.log(x);
+            } else if (type == 3) {
+                y = Math.sqrt(x);
+            } else if (type == 4) {
+                y = Math.abs(x);
+            }
+            document.calculator.total.value = y;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="calculator">
+        <br> Input:
+        <input type="text" name="num1">
+        <br> Result:
+        <input type="text" name="total" readonly>
+        <br>
+        <input type="button" value="SIN" onclick="calc(1)"></input>
+        <input type="button" value="LOG" onclick="calc(2)"></input>
+        <input type="button" value="SQRT" onclick="calc(3)"></input>
+        <input type="button" value="ABS" onclick="calc(4)"></input>
+
+    </form>
+
+    <hr>
+
+    <h3>Random Number Generator 1~100:</h3>
+    <script>
+        document.write(Math.floor(Math.random() * 100) + 1)
+    </script>
+
+    <hr>
+
+
+    <script>
+        function printArray(a) {
+            document.write("[");
+            for (var i = 0; i < a.length; i++) {
+                document.write(a[i] + " ");
+            }
+            document.write("]<br>");
+        }
+
+
+        // automatically makes arrays for inbetween 1-10
+        var myArray = new Array();
+        myArray[0] = "apple";
+        myArray[1] = "banana";
+        myArray[10] = "orange";
+
+
+
+        document.write(myArray.length + " arrays");
+        document.write("<br>");
+        for (var i = 0; i < myArray.length; i++) {
+            document.write(myArray[i] + "<br>");
+        }
+
+        var myArray2 = new Array("apple", "banana", "orange");
+        var myArray3 = ["apple", "banana", "orange"];
+
+
+        // printArray(myArray);
+        printArray(myArray2);
+        printArray(myArray3);
+    </script>
+
+    <hr>
+
+    <script>
+        var x = [1, 2, 3];
+        var y = [4, 5, 6];
+
+        var j = x.concat(y);
+
+        document.write(x + "<br>");
+        document.write(y + "<br>");
+        document.write(j + "<br>");
+
+        var fruits = ["apple", "banana", "pear"];
+
+
+        document.write("banana's index num: " + fruits.indexOf("banana"));
+    </script>
+
+
+    <hr>
+
+    <script>
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        //pop takes it out from the back
+        document.write(numbers + "<br>")
+        numbers.push(6);
+        document.write(numbers + "<br>");
+        var item = numbers.pop();
+        document.write(item + "<br>");
+        document.write(numbers + "<br>");
+        numbers.pop();
+        numbers.pop();
+        numbers.push(300);
+        document.write(numbers + "<br>");
+    </script>
+
+    <hr>
+
+
+    <script>
+        //shift takes it out from the front
+        var digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var item2 = digits.shift();
+        document.write(item + "<br>");
+        document.write(digits + "<br>");
+        digits.push(1);
+        document.write(digits + "<br>")
+    </script>
+
+    <hr>
+
+
+    <h3>sorting nums</h3>
+    <script>
+        var myArray5 = [1, 0, 11, 169, 19, 5, 99, 1];
+
+        document.write("Original array: " + myArray5 + "<br>");
+
+        myArray5.sort(
+            function (a, b) {
+                return a - b;
+            }
+        );
+        document.write("Sorted array: " + myArray5 + "<br>");
+    </script>
+</body>
+
+<hr>
+
+<script>
+    var numbers2 = [1, 2, 39, 40, 5, 16, 7, 28, 93, 10];
+
+    function isBigEnough(element, index, array) {
+        return (element >= 30);
+    }
+
+    var filtered = numbers2.filter(isBigEnough)
+    document.write(filtered)
+</script>
+
+
+<hr>
+
+<script>
+    var xx = [0, 1, 2, 3];
+    var zz = [4, 5, 6, 7];
+    var yy = [xx, zz];
+
+    document.write(yy[0][3]);
+</script>
+
+</html>

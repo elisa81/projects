@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        var msg = "blah";
+
+        function test() {
+            try {
+                allert("Hello world")
+            } catch (error) {
+                msg = "Errors are....." + error.message;
+                alert(msg);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Ex. 4</h3>
+    <script>
+        var total = 0;
+        var start = new Date().getTime();
+
+        for (i = 0; i <= 1000000; i++) {
+            total = i + total;
+        }
+
+        var end = new Date().getTime();
+        var time = end - start;
+        // alert("It took: " + time + " miliseconds");
+    </script>
+
+
+
+
+    <hr>
+
+
+
+
+    <h3>Ex. 5) Uppercase</h3>
+
+    <input type="text" id="name">
+    <button type="button" onclick="capitalize();">capitalize!</button>
+
+    <script>
+        function capitalize() {
+            var name = document.getElementById('name').value;
+            alert(name.charAt(0).toUpperCase() + name.slice(1));
+        }
+    </script>
+
+
+
+
+    <hr>
+
+
+
+
+    <h3>Ex.6) Get Month Function:</h3>
+    <p>This Month is: </p>
+    <p id="whatMonth">
+
+        <script>
+            var d = new Date();
+            var months = ['January', 'February', 'March', 'April', 'March', 'April', 'May', 'June', 'July', 'August',
+                'October', 'November', 'December'
+            ];
+
+            document.getElementById("whatMonth").innerHTML = months[d.getMonth()];
+        </script>
+    </p>
+
+
+
+
+
+    <hr>
+
+
+
+
+
+    <h3>Ex. 7) Movie</h3>
+    <script>
+        var movieArr = [" Terminator", " Transformer", " Jumanji"];
+        document.write("Movie list: " + movieArr);
+        document.write("<br>");
+
+        function addMovie() {
+            console.log(movieArr);
+            movieArr.push(document.getElementById("newMovie").value);
+            alert("New movie list: " + movieArr);
+        }
+
+        function replace() {
+            var newMovieArr = movieArr;
+            console.log(newMovieArr);
+            newMovieArr.splice((newMovieArr.length - 2), 1, "Spiderman");
+            console.log(newMovieArr);
+            alert("Inserted Spiderman: " + newMovieArr);
+
+        }
+    </script>
+
+    <input type="text" id="newMovie">
+    <button type="button" onclick="addMovie();">Add to List</button>
+    <button type="button" onclick="replace();">Replace w/Spiderman</button>
+
+
+
+
+
+    <hr>
+
+
+
+
+
+    <h3>Ex. 8) Random </h3>
+
+    <script>
+        var food = ["사과", "크로상", "오랜지", "귤", "아보카도", "케일", "케이크"];
+
+        document.write(food);
+        document.write("<br>");
+
+        function pick() {
+
+
+            var randomItem = food[Math.floor(Math.random() * food.length)];
+            alert(randomItem);
+        }
+    </script>
+
+    <button type="button" onclick="pick();">random</button>
+
+
+
+
+
+    <hr>
+
+
+
+
+
+    <h3>Ex. 9)</h3>
+
+    <script>
+        var arr = ["Help", "Hello", 10, "Hello", 32.6, true];
+        document.write("Array= [" + arr + "]<br><br>");
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] == "Hello") {
+                document.write("'Hello' in: " + i + "<br>");
+            }
+        }
+    </script>
+
+
+
+    <hr>
+
+
+
+
+    <h3>Ex.10) Check String</h3>
+
+    <script>
+        var sentence = ("This is xxx tree.");
+        document.write("a. This is xxx tree. <br>")
+
+        if (sentence.indexOf("x") != -1) {
+            document.write("true");
+
+        } else {
+            document.write("false");
+        }
+
+
+        document.write("<br><br>");
+        var sentence = ("This is a nice tree.");
+        document.write("b. This is a nice tree. <br>")
+
+        if (sentence.indexOf("x") != -1) {
+            document.write("true");
+
+        } else {
+            document.write("false");
+        }
+
+
+        document.write("<br><br>");
+        document.write("c. Input sentence:")
+
+        function checkSentence() {
+            var sen2 = document.getElementById('sentence2').value;
+            if (sen2.indexOf("x") != -1) {
+                document.write("true");
+            } else {
+                document.write("false");
+            }
+        }
+    </script>
+
+    <br>
+
+    <input type="text" id="sentence2">
+    <button onclick="checkSentence();">check</button>
+
+    <hr>
+
+
+
+
+    <h3>Ex. 11) Update Date</h3>
+
+
+
+
+    <script>
+        var date = new Date()
+        document.write("Current Date: " + date.getMonth() + "월" + date.getDate() + "일");
+
+
+        function myFunction() {
+            setTimeout(function () {
+                var date = new Date();
+                alert(date.getMonth() + "월" + date.getDate() + "일");
+            }, 10000);
+            //24시간은 = 1000 * 60 * 60 * 24
+        }
+    </script>
+
+    <br>
+    <p>10초 뒤에 날짜 다시 알려준다</p>
+    <button type="button" onclick="myFunction();">get date</button>
+
+
+    <!--     
+    <script>
+        var solution = 49;
+
+        function test2() {
+            try {
+                var x = document.getElementById("number").value;
+                if (x == "") {
+                    throw "did not enter number";
+                }
+                if (isNaN(x)) {
+                    throw "not a number";
+                }
+                if (x > solution) {
+                    throw "too big";
+                }
+                if (x < solution) {
+                    throw "too small";
+                }
+                if (x == solution) {
+                    throw "you got it!";
+                }
+            } catch (err) {
+                var y = document.getElementById("message");
+                y.innerHTML = "Hint: " + err;
+            }
+        }
+    </script>
+
+    <h1>Number Guess</h1>
+
+    <p>1 to 100</p>
+
+    <input id="number" type="text">
+    <button type="button" onclick="test2()">ok!</button>
+    <p id="message"></p> -->
+</body>
+
+</html>
