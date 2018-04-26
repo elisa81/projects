@@ -6,41 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        #even {
+            background-color: lightblue;
+            border: 1px solid lightblue;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        #odd {
+            background-color: lightyellow;
+            border: 1px solid lightyellow;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 3px;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <h3>stop watch</h3>
-
-    <div id="clock"></div>
-
     <script>
-        var c;
-
-        function setClock() {
-            var now = new Date();
-            var str = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-            document.getElementById("clock").innerHTML = str;
-        }
-
-
-        setClock();
-
-
-
-        function startTimer() {
-            c = setInterval("setClock()", 1000);
-        }
-
-        function stopTimer() {
-            clearInterval(c);
+        for (i = 0; i < 1000; i++) {
+            if (i % 2 == 0) {
+                document.write("<div class='box' id='odd'>    </div>")
+            } else {
+                document.write("<div class='box' id='even'>    </div>");
+            }
         }
     </script>
-
-    <br>
-    <button onClick="startTimer();">start</button>
-    <button onClick="stopTimer();">stop</button>
-
 
 </body>
 
