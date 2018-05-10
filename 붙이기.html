@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>물품목록</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <style>
+        body {
+            background-color: #7a7574;
+            font-family: sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #page {
+            background-color: #7a7574;
+            margin: 0px auto 0px auto;
+            position: relative;
+            text-align: center;
+        }
+
+        ul {
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        li {
+            background-color: #ec8b68;
+            color: #fff;
+            border-top: 1px solid #fe9772;
+            border-bottom: 1px solid #9f593f;
+            font-size: 24px;
+            letter-spacing: 0.5em;
+            list-style-type: none;
+            text-shadow: 2px 2px 1px #9f593f;
+            text-align: left;
+            padding-left: 1em;
+            padding-top: 10px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: normal;
+            text-align: center;
+            display: inline-block;
+            margin: 0px 0px 23px 0px;
+        }
+
+        .hot {
+            background-color: #d7666d;
+            color: #fff;
+        }
+
+        .cool {
+            background-color: #6cc0ac;
+            color: #fff;
+        }
+
+        .complete {
+            background-color: #999;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+
+                //  INSERT BY li
+                //    var one = $("#one").html();
+                //    $("ul").append("<li id='one' class='hot'>" + five + "</li>");
+
+                //    OR INSERT the whole ul
+                // var ul = $("ul").html();
+                // $("ul").append(ul);
+
+                // OR Prepend to the list
+                // var four = $("#four").html();
+                // $("ul").prepend("<li id='one class='cool'>" + four + "</li>");
+
+                // var one = $("li").html();
+                // $("li").prepend("<sub>" + one + "</sub>");
+
+                $("li").each(function () {
+                    $("ul").append("<li id='one' class=''>" + $(this).text() + "</li>");
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="page">
+        <h2>구입 물품목록</h2>
+        <ul id="lists">
+            <li id="one" class="hot">tomato</li>
+            <li id="two" class="hot">banana</li>
+            <li id="three" class="hot">apple</li>
+            <li id="four">mango</li>
+        </ul>
+
+        <input type="text" name="name" id="name" value="HI">
+        <input type="hidden" name="hid" id="hid" value="haha">
+        <input type="button" name="btn" id="btn" value="click">
+    </div>
+
+</body>
+
+</html>
