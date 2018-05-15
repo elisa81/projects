@@ -1,0 +1,50 @@
+body {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 1.5em;
+}
+
+form {
+    border-radius: 20px;
+    background-color: rgb(168, 108, 168);
+    padding: 1em;
+    margin: 0 auto;
+    width: 520px;
+    padding-bottom: 30px;
+}
+
+#subButton {
+    background-color: rgb(158, 66, 158);
+    color: white;
+}
+
+#resButton {
+    background-color: rgb(158, 66, 158);
+    color: white;
+}
+
+#loginButton {
+    background-color: rgb(158, 66, 158);
+    color: white;
+}
+
+input {
+    margin: 3px;
+    min-width: 100px;
+}
+
+input:focus {
+    border-color: rgb(218, 152, 218);
+}
+
+#reg {
+    border-radius: 20px;
+    background-color: rgb(168, 108, 168);
+    padding: 1em;
+    margin: 0 auto;
+    width: 540px;
+    padding-bottom: 30px;
+}
+
+body {
+    margin-top: 20px;
+}
