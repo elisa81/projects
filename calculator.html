@@ -9,7 +9,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+</head>
+
+<style>
+    form {
+        border: 2px solid grey;
+        padding: 10px;
+        background-color: skyblue;
+
+    }
+
+
+
+    #displayArea {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    #display {
+        background-color: rgb(246, 215, 219);
+        height: 40px;
+        width: 98%;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #btn {
+        width: 50px;
+        height: 40px;
+        font-weight: bold;
+        font-size: 2em;
+        background-color: rgb(113, 235, 113);
+    }
+</style>
+
+<body>
+    <h3>C A L C U L A T O R</h3>
+    <div class="flex-container">
+        <form name="calculator">
+            <table>
+                <tr colspan="4">
+                    <td id="displayArea">
+                        <input type="text" name="input" id="display" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="one" id="btn" value=" 1 " onclick="calculator.input.value += ' 1 '">
+                        <input type="button" name="two" id="btn" value=" 2 " onclick="calculator.input.value += ' 2 '">
+                        <input type="button" name="three" id="btn" value=" 3 " onclick="calculator.input.value += ' 3 '">
+                        <input type="button" name="plus" id="btn" value=" + " onclick="calculator.input.value += ' + '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="four" id="btn" value=" 4 " onclick="calculator.input.value += ' 4 '">
+                        <input type="button" name="five" id="btn" value=" 5 " onclick="calculator.input.value += ' 5 '">
+                        <input type="button" name="six" id="btn" value=" 6 " onclick="calculator.input.value += ' 6 '">
+                        <input type="button" name="minus" id="btn" value=" - " onclick="calculator.input.value += ' - '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="seven" id="btn" value=" 7 " onclick="calculator.input.value += ' 7 '">
+                        <input type="button" name="eight" id="btn" value=" 8 " onclick="calculator.input.value += ' 8 '">
+                        <input type="button" name="nine" id="btn" value=" 9 " onclick="calculator.input.value += ' 9 '">
+                        <input type="button" name="multiply" id="btn" value=" * " onclick="calculator.input.value += ' * '">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="clear" id="btn" value=" C " onclick="calculator.input.value = ''">
+                        <input type="button" name="zero" id="btn" value=" 0 " onclick="calculator.input.value += ' 0 '">
+                        <input type="button" name="calculate" id="btn" value=" = " onclick="calculator.input.value = eval(calculator.input.value)">
+                        <input type="button" name="div" id="btn" value=" / " onclick="calculator.input.value += ' / '">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>
 
 </head>
 
